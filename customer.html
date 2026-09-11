@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://kit.fontawesome.com/a4c13ff591.js" crossorigin="anonymous"></script>
+    <title>Customer - Book Haven Bookstore</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">
+          <img src="images/book_haven_bookstore_logo_3.png/book_haven_bookstore_logo_3.png" alt="Book Haven Bookstore logo">
+        </div>
+        <header>
+          <span class="line1">Book</span>
+          <span class="line2">Haven</span>
+          <span class="line3">Bookstore</span>
+        </header>
+      </div>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="customer.html" aria-current="page">Customer</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+
+    <main class="customer-page">
+      <section class="customer-intro">
+        <p class="eyebrow">From our community</p>
+        <h1>Customer Spotlight</h1>
+        <p class="intro-copy">Hear from the readers and neighbors who make Book Haven a special place. Their stories, reviews, and community spirit keep our shelves full and our doors open.</p>
+      </section>
+
+      <div class="customer-layout">
+        <section class="spotlight-section" aria-labelledby="reviews-title">
+          <div class="section-heading">
+            <p class="eyebrow">What readers are saying</p>
+            <h2 id="reviews-title">Customer Reviews</h2>
+          </div>
+          <div class="review-list">
+            <article class="review-card">
+              <div class="review-avatar">SM</div>
+              <div>
+                <h3>Sarah M.</h3>
+                <p>"Book Haven has the best selection of indie titles in the city. The staff always knows exactly what to recommend."</p>
+                <p class="review-author">5 stars</p>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="review-avatar">JD</div>
+              <div>
+                <h3>James D.</h3>
+                <p>"I come in every Saturday morning to browse the new arrivals. It's become my favorite weekend ritual."</p>
+                <p class="review-author">5 stars</p>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="review-avatar">AP</div>
+              <div>
+                <h3>Aisha P.</h3>
+                <p>"Their magazine section is incredible, and the tote bags are gorgeous. I never leave empty handed."</p>
+                <p class="review-author">4 stars</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="community-section" aria-labelledby="community-title">
+          <div class="section-heading">
+            <p class="eyebrow">Get involved</p>
+            <h2 id="community-title">Community</h2>
+          </div>
+          <div class="community-list">
+            <article class="community-card">
+              <span class="community-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span>
+              <h3>Book Club</h3>
+              <p>Monthly meetings every first Thursday at 6:30 PM. All readers welcome.</p>
+              <a class="text-link" href="#">Join the club</a>
+            </article>
+            <article class="community-card">
+              <span class="community-icon"><i class="fa-solid fa-calendar" aria-hidden="true"></i></span>
+              <h3>Author Events</h3>
+              <p>Local author signings and readings throughout the year. Check our schedule.</p>
+              <a class="text-link" href="#">See events</a>
+            </article>
+            <article class="community-card">
+              <span class="community-icon"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+              <h3>Volunteer</h3>
+              <p>Help with community events, story time, and shelf organization.</p>
+              <a class="text-link" href="#">Get involved</a>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="customer-bottom-grid">
+        <section class="events-section" aria-labelledby="events-title">
+          <p class="eyebrow">Mark your calendar</p>
+          <h2 id="events-title">Upcoming Events</h2>
+          <p>Join us for author signings, book clubs, kids' story time, and seasonal sales. There's always something happening at Book Haven.</p>
+          <ul class="why-list">
+            <li>Sept 12 — Local Author Night with Maria Chen</li>
+            <li>Sept 19 — Kids' Story Time (ages 3-7)</li>
+            <li>Sept 26 — Book Club: "The Midnight Library"</li>
+            <li>Oct 3 — Fall Sale Weekend (20% off all titles)</li>
+          </ul>
+          <a class="text-link" href="#">View full calendar</a>
+        </section>
+
+        <section class="newsletter-card" aria-labelledby="newsletter-title">
+          <p class="eyebrow">Stay in the loop</p>
+          <h2 id="newsletter-title">Newsletter Signup</h2>
+          <p>Get event updates, new arrival alerts, and exclusive member deals delivered to your inbox.</p>
+          <form class="newsletter-form">
+            <label for="newsletter-email">Email address</label>
+            <div class="newsletter-input-row">
+              <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required>
+              <button type="submit" class="subscribe-button">Subscribe</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <section class="sign-up-for-newsletter">
+        <h2>Sign up for newsletter</h2>
+        <form class="newsletter-form">
+          <label for="footer-email">Email information</label>
+          <div class="newsletter-input-row">
+            <input id="footer-email" name="email" type="email" placeholder="you@example.com" required>
+            <button type="submit" class="subscribe-button">Subscribe</button>
+          </div>
+        </form>
+      </section>
+      <section class="social-media-links" aria-label="Social media links">
+        <p>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+        </p>
+      </section>
+      <nav aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="customer.html" aria-current="page">Customer</a>
+        <a href="about.html">About</a>
+      </nav>
+    </footer>
+  </body>
+</html>
