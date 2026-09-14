@@ -34,7 +34,7 @@
         <h1>Book Haven Bookstore Gallery</h1>
         <p class="intro-copy">A curated collection of books, magazines, and gifts. Add your favorites to the cart and stop by the store to pick them up.</p>
         <div class="view-cart">
-          <button class="primary-button">View cart</button>
+          <button class="primary-button view-cart-btn">View cart</button>
           <button type="button" class="secondary-button clear-cart">Clear Cart</button>
           <button type="button" class="secondary-button process-order">Process Order</button>
         </div>
@@ -97,6 +97,26 @@
         </article>
       </div>
     </main>
+
+    <div id="cart-modal" class="cart-modal-overlay" hidden>
+      <div class="cart-modal" role="dialog" aria-labelledby="cart-modal-title" aria-modal="true">
+        <div class="cart-modal-header">
+          <h2 id="cart-modal-title">Your Shopping Cart</h2>
+          <button type="button" class="cart-close-btn" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-modal-body">
+          <ul class="cart-items-list" id="cart-items-list"></ul>
+          <p class="cart-empty-message" id="cart-empty-message" hidden>Your cart is empty. Add some items from the gallery!</p>
+          <div class="cart-summary" id="cart-summary" hidden>
+            <p class="cart-total">Total items: <span id="cart-total-count">0</span></p>
+          </div>
+        </div>
+        <div class="cart-modal-footer">
+          <button type="button" class="secondary-button clear-cart">Clear Cart</button>
+          <button type="button" class="primary-button process-order">Process Order</button>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <section class="sign-up-for-newsletter">
