@@ -194,16 +194,63 @@ function onFeedbackSubmit(event) {
 
 // ---- Newsletter subscribe ----
 
+function isValidEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+function showNewsletterMessage(form, text, isError) {
+  var existing = form.querySelector(".newsletter-message");
+  if (existing) existing.remove();
+
+  var msg = document.createElement("p");
+  msg.className = "newsletter-message" + (isError ? " newsletter-error" : " newsletter-success");
+  msg.textContent = text;
+  form.appendChild(msg);
+
+  if (!isError) {
+    setTimeout(function () {
+      if (msg.parentNode) msg.remove();
+    }, 4000);
+  }
+}
+
 function onSubscribe(event) {
   event.preventDefault();
-  alert("Thank you for subscribing.");
+  var form = event.target;
+  var input = form.querySelector('input[type="email"]');
+  if (!input) return;
+
+  var value = input.value.trim();
+
+  if (!value) {
+    showNewsletterMessage(form, "Please enter your email address.", true);
+    input.focus();
+    return;
+  }
+
+  if (!isValidEmail(value)) {
+    showNewsletterMessage(form, "Please enter a valid email address (e.g. you@example.com).", true);
+    input.focus();
+    return;
+  }
+
+  showNewsletterMessage(form, "Thank you for subscribing!", false);
+  form.reset();
 }
 
 // ---- Init ----
 
 function init() {
-  document.querySelectorAll(".subscribe-button").forEach(function (btn) {
-    btn.addEventListener("click", onSubscribe);
+  document.querySelectorAll(".newsletter-form").forEach(function (form) {
+    form.addEventListener("submit", onSubscribe);
+
+    var input = form.querySelector('input[type="email"]');
+    if (input) {
+      input.addEventListener("input", function () {
+        var msg = form.querySelector(".newsletter-message");
+        if (msg) msg.remove();
+      });
+    }
   });
 
   document.querySelectorAll(".add-to-cart").forEach(function (btn) {
